@@ -53,7 +53,7 @@ This project was built using these technologies.
 
 Clone down this repository by:-
 
-`git clone https://github.com/mansidhamne/portfolio.git`
+`git clone https://github.com/mansidhamne/portfolio_mansi.git`
 
 ## 🛠 Installation and Setup Instructions
 
