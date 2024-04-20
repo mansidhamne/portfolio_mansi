@@ -19,7 +19,7 @@ export default function Hero() {
             }}
             className="relative flex flex-col gap-4 items-center justify-center px-4"
           >
-            <div className={`sm:px-16 px-2 max-w-7xl mx-auto flex flex-col justify-between items-center sm:flex-row sm:items-start gap-5 mt-[100px] lg:mt-0`}>
+            <div className={`sm:px-16 px-2 max-w-7xl mx-auto flex flex-col justify-between items-center sm:flex-row sm:items-start gap-5 mt-[90px] lg:mt-0`}>
            <div className='flex flex-row'>
             <div className='flex flex-col justify-center items-center mt-5 w-[50px]'>
                <div className='w-5 h-5 rounded-full bg-violet-950' />
@@ -45,7 +45,7 @@ export default function Hero() {
               <img
                 src={hero}
                 alt="hero"
-                className="z-50 w-[275px] sm:w-auto hover:cursor-pointer"
+                className="z-50 w-[295px] sm:w-auto hover:cursor-pointer"
               />
             </div>
           </motion.div>
