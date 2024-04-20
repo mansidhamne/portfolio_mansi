@@ -8,8 +8,6 @@ import GitHubCalendar from "react-github-calendar";
 import { CgGitFork } from "react-icons/cg";
 import { FaStar } from "react-icons/fa6";
 
-
-
 const Github = () => {
   const [avatarURL, setAvatarURL] = useState();
   const [followersCount, setFollowersCount] = useState();
@@ -81,10 +79,12 @@ const Github = () => {
                 </div>
               </div>
               <div className='flex flex-row justify-between gap-6'>
-                  <button href="https://github.com/mansidhamne" target="_blank"
-                    className='text-white flex flex-row bg-purple-400 px-4 sm:px-8 py-2 rounded-lg gap-2 hover:cursor-pointer hover:text-purple-400 hover:bg-transparent'><CgGitFork size={20}/><FaStar size={19}/></button>
-                  <button href="https://github.com/mansidhamne" target="_blank"
-                    className='text-white bg-purple-400 px-8 py-1 rounded-lg hover:cursor-pointer hover:text-purple-400 hover:bg-transparent'>Follow Me!</button>
+                <a href="https://github.com/mansidhamne/portfolio_mansi" target='_blank'>
+                  <button className='text-white flex flex-row bg-purple-400 px-4 sm:px-8 py-2 rounded-lg gap-2 hover:cursor-pointer hover:text-purple-400 hover:bg-transparent'><CgGitFork size={20}/><FaStar size={19}/></button>
+                </a>
+                <a href="https://github.com/mansidhamne" target='_blank'>
+                  <button className='text-white bg-purple-400 px-8 py-1 rounded-lg hover:cursor-pointer hover:text-purple-400 hover:bg-transparent'>Follow Me!</button>
+                </a>
               </div>
             </div>
           </div>

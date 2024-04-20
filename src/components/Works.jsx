@@ -23,9 +23,9 @@ const ProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className='bg-black p-5 rounded-2xl sm:w-[360px] w-[300px]'
+        className='bg-black p-5 rounded-2xl sm:w-[360px] w-[300px] overflow-hidden'
       >
-        <div>
+        <div className="overflow-hidden">
           <h3 className='text-white font-semibold text-[24px]'>{name}</h3>
           <p className='my-2 text-slate-400 text-[14px] text-justify'>{description}</p>
           <div className='relative w-full h-[200px] pt-2'>
@@ -63,7 +63,7 @@ const Works = () => {
         <p className={styles.sectionSubText}>My Work</p>
         <h2 className={styles.sectionHeadText}>Projects.</h2>
       </motion.div>
-      <div className='mt-12 mb-32 flex flex-wrap gap-7 justify-center'>
+      <div className='mt-12 mb-32 flex flex-wrap gap-7 justify-center overflow-hidden'>
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}

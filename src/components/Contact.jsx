@@ -70,8 +70,8 @@ const Contact = () => {
           <h2 className={styles.sectionHeadText}>Contact.</h2>
       </motion.div>
       <div className='p-12 bg-violet-300 mt-8 rounded-xl flex flex-col gap-10 md:flex-row md:gap-24 transition hover:bg-violet-400'>
-        <div className='flex flex-col gap-8 md:w-1/2'>
-          <p className="font-semibold text-2xl sm:text-4xl text-secondary tracking-wider">Let's Chat</p>
+        <div className='flex flex-col gap-8 md:w-1/2 overflow-hidden'>
+          <p className="font-semibold text-2xl sm:text-4xl text-secondary tracking-wider overflow-hidden">Let's Chat</p>
           <p className='text-justify text-[16px]'>Feel free to reach out if you're interested in collaborating, 
             have any questions, or just want to chat!<br className='md:block hidden'/><br className='md:block hidden'/> 
             You can connect with me through my social media channels or drop me an email, and 
@@ -93,7 +93,7 @@ const Contact = () => {
           onSubmit={handleSubmit}
           className='flex flex-col gap-4 md:w-1/2'
         >
-          <p className="font-semibold text-2xl sm:text-4xl text-secondary tracking-wider">Drop me a mail! &#128228;</p>
+          <p className="font-semibold text-2xl sm:text-4xl text-secondary tracking-wider overflow-hidden">Drop me a mail! &#128228;</p>
           <label className='flex flex-col'>
             <span className='text-white font-medium mb-4'>Your Name</span>
             <input

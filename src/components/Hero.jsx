@@ -27,7 +27,7 @@ export default function Hero() {
              </div>
              <div className='pl-4 overflow-hidden'>
                  <h1 className={`${styles.heroHeadText} text-slate-800`}>Hi, I'm <span className='text-violet-950'>Mansi!</span></h1>
-                   <p className={`${styles.heroSubText} text-slate-600`}>I am a <span className='text-violet-900'>fullstack web developer</span> <br/> and a <span className='text-violet-900'>ML Enthusiast</span> with a passion <br className='xs:block hidden'/>for building and experimenting.</p>
+                   <p className={`${styles.heroSubText} text-slate-600 overflow-hidden`}>I am a <span className='text-violet-900'>fullstack web developer</span> <br/> and a <span className='text-violet-900'>ML Enthusiast</span> with a passion <br className='xs:block hidden'/>for building and experimenting.</p>
                </div>
              </div>
             </div>
@@ -40,6 +40,7 @@ export default function Hero() {
               duration: 0.8,
               ease: "easeInOut",
             }}
+            className='overflow-hidden'
           >
             <div class="relative">
               <img
