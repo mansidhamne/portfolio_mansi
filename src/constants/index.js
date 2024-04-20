@@ -100,20 +100,6 @@ import {
       name: "Fig Pro",
       description:
         "This website integrates LiveBlocks for real-time design, allowing seamless creation, editing, and PDF exportation. It incorporates version control and captivating UI/UX",
-      tags: [
-        {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "mongodb",
-          color: "green-text-gradient",
-        },
-        {
-          name: "tailwind",
-          color: "pink-text-gradient",
-        },
-      ],
       image: figpro,
       source_code_link: "https://github.com/mansidhamne/figma-clone",
     },
@@ -121,20 +107,6 @@ import {
       name: "Codepedia",
       description:
         "This is the ultimate MERN web application, seamlessly blending CRUD operations, user authentication, and an intuitive Dark Mode/Light Mode toggle.",
-      tags: [
-        {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "mongodb",
-          color: "green-text-gradient",
-        },
-        {
-          name: "tailwind",
-          color: "pink-text-gradient",
-        },
-      ],
       image: codopedia,
       source_code_link: "https://github.com/mansidhamne/codopedia",
     },
@@ -142,20 +114,6 @@ import {
       name: "Sum It Up",
       description:
         "This is an innovative project designed to address the challenge of processing and condensing lengthy articles using AI techniques.",
-      tags: [
-        {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "mongodb",
-          color: "green-text-gradient",
-        },
-        {
-          name: "tailwind",
-          color: "pink-text-gradient",
-        },
-      ],
       image: sumitup,
       source_code_link: "https://github.com/mansidhamne/AI-Summarizer",
     },

@@ -4,7 +4,7 @@ import emailjs from '@emailjs/browser'
 import { motion } from 'framer-motion'
 import { styles } from '../styles'
 import { SectionWrapper } from '../hoc'
-import { slideIn, textVariant } from '../utils/motion'
+import { textVariant } from '../utils/motion'
 import { contacts } from '../constants'
 
 const Contact = () => {
