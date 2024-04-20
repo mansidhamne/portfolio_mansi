@@ -1,9 +1,9 @@
 <h2 align="center">
   Portfolio Website<br/>
-  <a href="https://portfoliomansi.vercel.app/" target="_blank">Mansi | Portfolio</a>
+  <a href="https://portfolio-mansi.vercel.app/" target="_blank">Mansi | Portfolio</a>
 </h2>
 <div align="center">
-  <img alt="Demo" src="https://github.com/mansidhamne/portfolio/assets/129254413/970704d4-753e-482b-95b0-9284ebf8bf36" width="700px" />
+  <img alt="Demo" src="https://github.com/mansidhamne/portfolio_mansi/assets/129254413/aae0e47f-5125-4bea-8a4e-1aab143d3fbb" width="700px" />
 </div>
 
 <br/>
