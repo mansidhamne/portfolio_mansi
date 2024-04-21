@@ -7,7 +7,7 @@ import { SectionWrapper } from '../hoc'
 import { textVariant } from '../utils/motion'
 import { contacts } from '../constants'
 
-const Contact = () => {
+const Contact = ({darkMode}) => {
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -69,7 +69,7 @@ const Contact = () => {
           <p className={styles.sectionSubText}>Get In Touch</p>
           <h2 className={styles.sectionHeadText}>Contact.</h2>
       </motion.div>
-      <div className='p-12 bg-violet-300 mt-8 rounded-xl flex flex-col gap-10 md:flex-row md:gap-24 transition hover:bg-violet-400'>
+      <div className={`p-12 ${darkMode ? 'bg-orange-300 hover:bg-orange-200' : 'bg-violet-300  hover:bg-violet-400'}  mt-8 rounded-xl flex flex-col gap-10 md:flex-row md:gap-24 transition`}>
         <div className='flex flex-col gap-8 md:w-1/2 overflow-hidden'>
           <p className="font-semibold text-2xl sm:text-4xl text-secondary tracking-wider overflow-hidden">Let's Chat</p>
           <p className='text-justify text-[16px]'>Feel free to reach out if you're interested in collaborating, 
@@ -95,42 +95,42 @@ const Contact = () => {
         >
           <p className="font-semibold text-2xl sm:text-4xl text-secondary tracking-wider overflow-hidden">Drop me a mail! &#128228;</p>
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Name</span>
+            <span className={`${darkMode ? 'text-zinc-800' : 'text-white' } font-medium mb-4`}>Your Name</span>
             <input
               type='text'
               name='name'
               value={form.name}
               onChange={handleChange}
               placeholder="What's your good name?"
-              className='bg-slate-50 py-4 px-6 placeholder:text-violet-950/60 text-slate-700 text-sm rounded-lg outline-none border-none font-medium'
+              className={`bg-slate-50 py-4 px-6 ${darkMode ? 'placeholder:text-orange-900/70' : 'placeholder:text-violet-950/60'}  text-slate-700 text-sm rounded-lg outline-none border-none font-medium`}
             />
           </label>
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your email</span>
+            <span className={`${darkMode ? 'text-zinc-800' : 'text-white' } font-medium mb-4`}>Your email</span>
             <input
               type='email'
               name='email'
               value={form.email}
               onChange={handleChange}
               placeholder="What's your email address?"
-              className='bg-slate-50 py-4 px-6  placeholder:text-violet-950/60 text-slate-700 text-sm rounded-lg outline-none border-none font-medium'
+              className={`bg-slate-50 py-4 px-6 ${darkMode ? 'placeholder:text-orange-900/70' : 'placeholder:text-violet-950/60'}  text-slate-700 text-sm rounded-lg outline-none border-none font-medium`}
             />
           </label>
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Message</span>
+            <span className={`${darkMode ? 'text-zinc-800' : 'text-white' } font-medium mb-4`}>Your Message</span>
             <textarea
               rows={2}
               name='message'
               value={form.message}
               onChange={handleChange}
               placeholder='What you want to say?'
-              className='bg-slate-50 py-4 px-6  placeholder:text-violet-950/60 text-slate-700 text-sm  rounded-lg outline-none border-none font-medium'
+              className={`bg-slate-50 py-4 px-6 ${darkMode ? 'placeholder:text-orange-900/70' : 'placeholder:text-violet-950/60'}  text-slate-700 text-sm rounded-lg outline-none border-none font-medium`}
             />
           </label>
           <div className='flex justify-center mt-2'>
             <button
               type='submit'
-              className=' bg-violet-950 py-3 px-12 rounded-xl outline-none w-fit text-white font-bold cursor-pointer transition hover:scale-110 hover:bg-violet-800'
+              className={`${darkMode ? 'bg-orange-700 hover:bg-orange-500': 'bg-violet-950 hover:bg-violet-800'} py-3 px-12 rounded-xl outline-none w-fit text-white font-bold cursor-pointer transition hover:scale-110 `} 
             >
               {loading ? "Sending..." : "Send"}
             </button>

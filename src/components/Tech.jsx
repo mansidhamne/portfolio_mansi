@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 import { textVariant } from '../utils/motion'
 import { styles } from '../styles'
 
-const Tech = () => {
+const Tech = ({ darkMode }) => {
   return (
     <>
       <motion.div 
@@ -18,13 +18,13 @@ const Tech = () => {
       <div className='flex flex-row flex-wrap justify-center gap-10 mt-6 mb-32 max-w-full'>
         {technologies.map((technology) => (
           <div className='w-40 h-36' key={technology.name}>
-            <BallCanvas icon = {technology.icon} name = {technology.name}/>
+            <BallCanvas icon = {technology.icon} name = {technology.name} darkMode = {darkMode}/>
           </div>
         ))}
       </div>
       <div className='absolute xs:bottom-10 bottom-3 w-full flex justify-center items-center'>
           <a href="#work">
-            <div className='w-[35px] h-[60px] rounded-3xl border-4 border-violet-950 flex justify-center items-start p-2'>
+            <div className={`w-[35px] h-[60px] rounded-3xl border-4 ${darkMode ? 'border-orange-200/80' : 'border-violet-950/80'} flex justify-center items-start p-2`}>
               <motion.div 
                 animate={{
                   y: [0, 24, 0]
@@ -34,7 +34,7 @@ const Tech = () => {
                   repeat: Infinity,
                   repeatType: 'loop'
                 }}
-                className="w-3 h-3 rounded-full bg-violet-950 mb-1"
+                className={`w-3 h-3 rounded-full ${darkMode ? 'bg-orange-200/80' : 'bg-violet-950/80'} mb-1`}
               />
             </div>
           </a>

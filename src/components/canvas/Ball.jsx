@@ -27,7 +27,7 @@ const Ball = (props) => {
   )
 }
 
-const BallCanvas = ({ icon, name }) => {
+const BallCanvas = ({ icon, name, darkMode }) => {
   return (
     <>
       
@@ -43,8 +43,8 @@ const BallCanvas = ({ icon, name }) => {
         </Suspense>
         <Preload all />
       </Canvas>
-      <div className='mx-8'>
-        <h3 className='text-slate-700 font-semibold text-center'>
+      <div className={`mx-8`}>
+        <h3 className={`${darkMode ? 'text-orange-300/80' : 'text-slate-700'} font-semibold text-center`}>
           {name}
         </h3>
       </div>

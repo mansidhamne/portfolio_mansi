@@ -14,6 +14,7 @@ const ProjectCard = ({
   description,
   image,
   source_code_link,
+  darkMode,
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -23,10 +24,10 @@ const ProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className='bg-black p-5 rounded-2xl sm:w-[360px] w-[300px] overflow-hidden'
+        className={`${darkMode ? 'bg-slate-950' : 'bg-black' }  p-5 rounded-2xl sm:w-[360px] w-[300px] overflow-hidden`}
       >
         <div className="overflow-hidden">
-          <h3 className='text-white font-semibold text-[24px]'>{name}</h3>
+          <h3 className={`${darkMode ? 'text-orange-300' : 'text-violet-300'} font-semibold text-[24px]`}>{name}</h3>
           <p className='my-2 text-slate-400 text-[14px] text-justify'>{description}</p>
           <div className='relative w-full h-[200px] pt-2'>
           <img
@@ -53,7 +54,7 @@ const ProjectCard = ({
   );
 };
 
-const Works = () => {
+const Works = ({darkMode}) => {
   return (
     <>
       <motion.div 
@@ -65,13 +66,13 @@ const Works = () => {
       </motion.div>
       <div className='mt-12 mb-32 flex flex-wrap gap-7 justify-center overflow-hidden'>
         {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
+          <ProjectCard key={`project-${index}`} index={index} {...project} darkMode={darkMode}/>
         ))}
       </div>
           
       <div className='absolute xs:bottom-0 bottom-4 w-full flex justify-center items-center'>
         <a href="#github">
-        <div className='w-[35px] h-[60px] rounded-3xl border-4 border-violet-950 flex justify-center items-start p-2'>
+        <div className={`w-[35px] h-[60px] rounded-3xl border-4 ${darkMode ? 'border-orange-200/80' : 'border-violet-950/80'} flex justify-center items-start p-2`}>
           <motion.div 
             animate={{
               y: [0, 24, 0]
@@ -81,7 +82,7 @@ const Works = () => {
               repeat: Infinity,
               repeatType: 'loop'
             }}
-            className="w-3 h-3 rounded-full bg-violet-950 mb-1"
+            className={`w-3 h-3 rounded-full ${darkMode ? 'bg-orange-200/80' : 'bg-violet-950/80'} mb-1`}
             />
           </div>
         </a>
