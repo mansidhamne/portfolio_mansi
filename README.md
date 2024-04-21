@@ -45,6 +45,8 @@ This project was built using these technologies.
 
 **🌎 3D components using the fascinating Three.js library**
 
+**💡 Maximum accessibility with dark and light mode**
+
 **🎨 Styled with TailwindCSS and animations using framer motion**
 
 **📱 Fully Responsive**
