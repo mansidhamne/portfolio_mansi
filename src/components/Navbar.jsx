@@ -40,9 +40,9 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             <li key={Link.id}
             className={`${
               active === Link.title 
-              ? 'text-slate-900 underline decoration-violet-400 decoration-4 text-[18px] font-semibold'
-              : 'hover:underline decoration-4 hover:decoration-violet-400 hover:scale-110 text-[18px] font-semibold cursor-pointer'}
-              ${darkMode ? (active === Link.title ? 'text-white decoration-orange-300' : 'text-white hover:decoration-orange-300') : ''}`}
+              ? 'underline decoration-4 text-[18px] font-semibold'
+              : 'hover:underline decoration-4  hover:scale-110 text-[18px] font-semibold cursor-pointer'}
+              ${darkMode ? (active === Link.title ? 'text-white decoration-orange-300' : 'text-white hover:decoration-orange-300') : (active === Link.title ? 'text-slate-800 decoration-violet-400' : 'text-slate-800 hover:decoration-violet-400')}`}
               onClick={() => setActive(Link.title)}>
             <a href={`#${Link.id}`}>{Link.title}</a>
           </li>
