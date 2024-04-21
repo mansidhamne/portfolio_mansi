@@ -47,7 +47,7 @@ const Hero = ({ darkMode }) => {
               <img
                 src={hero}
                 alt="hero"
-                className="z-50 w-[295px] sm:w-auto hover:cursor-pointer mb-12 lg:mb-0"
+                className="z-50 w-[295px] sm:w-auto mb-12 lg:mb-0"
               />
             </div>
           </motion.div>

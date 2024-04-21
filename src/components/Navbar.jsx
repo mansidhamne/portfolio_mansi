@@ -40,7 +40,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             <li key={Link.id}
             className={`${
               active === Link.title 
-              ? 'text-slate-900 underline decoration-violet-400 decoration-4 text-[18px]'
+              ? 'text-slate-900 underline decoration-violet-400 decoration-4 text-[18px] font-semibold'
               : 'hover:underline decoration-4 hover:decoration-violet-400 hover:scale-110 text-[18px] font-semibold cursor-pointer'}
               ${darkMode ? (active === Link.title ? 'text-white decoration-orange-300' : 'text-white hover:decoration-orange-300') : ''}`}
               onClick={() => setActive(Link.title)}>
@@ -48,7 +48,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           </li>
           ))}
           <div className="flex items-center">
-          <button onClick={toggleDarkMode} className="rounded-full dark:hover:bg-gray-800">
+          <button onClick={toggleDarkMode} className="dark:hover:bg-gray-800">
             {darkMode ? <IoSunnySharp size={20} style={{ color: 'white' }}/> : <IoMoon size={20}/> }
           </button>
         </div>
@@ -66,14 +66,15 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
               onClick={() => setToggle(!toggle)}
             />
           )}
-          <div className={`${!toggle ? 'hidden' : 'flex'} fixed inset-0  bg-slate-50 justify-center items-center z-10 p-16 top-[67px] right-0 my-0 min-w[140px] roundex-xl`}>
+          <div className={`${!toggle ? 'hidden' : 'flex'} fixed inset-0 ${darkMode ? 'bg-zinc-900/95' : 'bg-slate-50/95'}  justify-center items-center z-10 p-16 top-[67px] right-0 my-0 min-w[140px] roundex-xl`}>
           <ul className='list-none flex flex-col justify-end items-center gap-4'>
           {navLinks.map((Link) => (
             <li key={Link.id}
               className={`${
                 active === Link.title 
                 ? 'text-slate-900 underline decoration-violet-400'
-                : 'text-slate-600'} hover:underline decoration-4 hover:decoration-violet-400 hover:scale-125 text-[24px] font-semibold cursor-pointer`}
+                : 'text-slate-600'} hover:underline decoration-4 hover:decoration-violet-400 hover:scale-105 text-[24px] font-semibold cursor-pointer
+                ${darkMode ? (active === Link.title ? 'text-white decoration-orange-300' : 'text-white hover:decoration-orange-300') : ''}`}
                 onClick={() => {
                   setToggle(!toggle)
                   setActive(Link.title)}}>
@@ -81,8 +82,10 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             </li>
             
           ))}
-          <button onClick={toggleDarkMode} className="rounded-full hover:bg-gray-200 dark:hover:bg-gray-800">
-            {darkMode ? <IoSunnySharp size={24}/> : <IoMoon size={24}/> }
+          <button className="rounded-full hover:bg-gray-200 dark:hover:bg-gray-800"
+            onClick={toggleDarkMode} 
+          >
+            {darkMode ? <IoSunnySharp size={24} style={{ color: 'white' }}/> : <IoMoon size={24}/> }
           </button>
         </ul>
           </div>

@@ -56,7 +56,7 @@ const About = ({ darkMode }) => {
           </motion.div>
         </Tilt>
       </div>
-      <motion.button 
+      {/* <motion.button 
         variants={fadeIn("", "", 0.1, 1)}
         className={`mt-4 xs:mt-0 flex flex-row items-center font-semibold py-2 px-4 rounded-lg hover:border-2 hover:bg-transparent  text-white ${darkMode ? 'bg-orange-400  border-orange-400 hover:text-orange-400' : ' bg-violet-800 text-white  border-violet-800 hover:text-violet-800'}`}
         onClick={() => {
@@ -69,7 +69,25 @@ const About = ({ darkMode }) => {
       >
         <FiDownload className="mr-2" />
         <span>Resume</span>
-      </motion.button>
+      </motion.button> */}
+      <div className="w-full max-w-7xl mx-auto">
+        <div className="mt-4 xs:mt-0 flex justify-center lg:justify-start">
+          <motion.button
+            variants={fadeIn("", "", 0.1, 1)}
+            className={`flex flex-row items-center font-semibold xs:w-full py-2 px-4 rounded-lg hover:border-2 hover:bg-transparent  text-white ${darkMode ? 'bg-orange-400  border-orange-400 hover:text-orange-400' : ' bg-violet-800 text-white  border-violet-800 hover:text-violet-800'}`}
+            onClick={() => {
+              const pdfPath = pdf;
+              const link = document.createElement('a');
+              link.href = pdfPath;
+              link.download = 'resume.pdf';
+              link.click();
+            }}
+          >
+            <FiDownload className="mr-2" />
+            <span>Resume</span>
+          </motion.button>
+        </div>
+      </div>
     </>
   );
 }
