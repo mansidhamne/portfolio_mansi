@@ -101,6 +101,7 @@ const Contact = ({darkMode}) => {
               name='name'
               value={form.name}
               onChange={handleChange}
+              required={true}
               placeholder="What's your good name?"
               className={`bg-slate-50 py-4 px-6 ${darkMode ? 'placeholder:text-orange-900/70' : 'placeholder:text-violet-950/60'}  text-slate-700 text-sm rounded-lg outline-none border-none font-medium`}
             />
@@ -110,6 +111,7 @@ const Contact = ({darkMode}) => {
             <input
               type='email'
               name='email'
+              required={true}
               value={form.email}
               onChange={handleChange}
               placeholder="What's your email address?"
@@ -122,6 +124,7 @@ const Contact = ({darkMode}) => {
               rows={2}
               name='message'
               value={form.message}
+              required={true}
               onChange={handleChange}
               placeholder='What you want to say?'
               className={`bg-slate-50 py-4 px-6 ${darkMode ? 'placeholder:text-orange-900/70' : 'placeholder:text-violet-950/60'}  text-slate-700 text-sm rounded-lg outline-none border-none font-medium`}
